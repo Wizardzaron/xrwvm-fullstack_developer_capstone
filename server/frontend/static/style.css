@@ -13,6 +13,12 @@ img{
   margin-bottom: 1%;
 }
 
+.contact_info{
+
+    text-align: center;
+    color: blue
+}
+
 .row{
   display: flex;  
   flex: 1;
