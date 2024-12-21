@@ -35,20 +35,20 @@ class CarMake(models.Model):
 class CarModel(models.Model):
     car_make = models.ForeignKey(CarMake, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
-    
+
     CAR_TYPES = [
         ('Sedan', 'Inbound'),
         ('SUV', 'Outbound'),
         ('WAGON', 'WAGON')
     ]
-    
+
     types = models.CharField(max_length=100)
     year = models.IntegerField(default=2023,
     validators=[
-        MaxValueValidator(2023),
-        MinValueValidator(2015)
+            MaxValueValidator(2023),
+            MinValueValidator(2015)
     ])
-    
+
     def __str__(self):
-        
+
         return str(self.id)
