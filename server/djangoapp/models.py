@@ -11,10 +11,12 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 # - Any other fields you would like to include in car make model
 # - __str__ method to print a car make object
 
+
 class CarMake(models.Model):
-    
+
+
     name = models.CharField(max_length=100)
-    
+
     description = models.TextField()
 
     def __str__(self):
@@ -46,6 +48,8 @@ class CarModel(models.Model):
         validators=[
             MaxValueValidator(2023),
             MinValueValidator(2015)
-        ]) 
+        ])
+    
     def __str__(self):
+        
         return str(self.id)
